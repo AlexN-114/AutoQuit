@@ -16,7 +16,7 @@
 #define INTERNAL_NAME	""
 #define LEGAL_COPYRIGHT	""
 #define LEGAL_TRADEMARKS	""
-#define ORIGINAL_FILENAME	"AutoQuit.exe"
+#define ORIGINAL_FILENAME	"AutoQuit32.exe"
 #define PRODUCT_NAME	"AutoQuit"
 #define PRODUCT_VERSION	"0.1.1.1"
 
