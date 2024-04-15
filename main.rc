@@ -1,0 +1,37 @@
+#include <windows.h>
+#include "version.h"
+
+100 ICON "AutoQuit.ico"
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION RC_FILEVERSION
+PRODUCTVERSION RC_FILEVERSION
+FILEFLAGSMASK 0x3F
+FILEFLAGS 0x0
+FILEOS VOS__WINDOWS32
+FILETYPE VFT_APP
+FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "0C0704B0"
+    BEGIN
+      VALUE "Comments", "AutoQuit sendet IDOK an Fenster mit vorgegeben Text\0"
+      VALUE "CompanyName", "//-\\. //\\//. Software\0"
+      VALUE "FileDescription", "AutoQuit: sendet IDOK\0"
+      VALUE "FileVersion", RC_FILEVERSION_STRING
+      VALUE "InternalName", "AutoQuit\0"
+      VALUE "LegalCopyright", "Alexander Neumeister © 2024\0"
+      VALUE "LegalTrademarks", "Alexander NEUMEISTER\0"
+      VALUE "OriginalFilename", "AutoQuit.EXE\0"
+      VALUE "ProductName", "AutoQuit\0"
+      VALUE "ProductVersion", RC_FILEVERSION_STRING
+      VALUE "SpecialBuild", "Code::Block - Version\0"
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0xC07, 0x4B0
+  END
+END
+
