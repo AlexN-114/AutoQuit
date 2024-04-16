@@ -1,5 +1,5 @@
 [Project]
-filename = AutoQuitCg.dev
+filename = AutoQuit.gcc32.dev
 name = AutoQuit
 UnitCount = 4
 Type = 1
@@ -15,13 +15,13 @@ CppCompiler =
 Linker = 
 ResourceCommand = 
 IsCpp = 0
-Icon = 
+Icon = app.ico
 ExeOutput = bin
-ObjectOutput = obj/clg64
+ObjectOutput = obj/gcc32
 LogOutput = 
 LogOutputEnabled = 0
 OverrideOutput = 1
-OverrideOutputName = AutoQuit.clg64.exe
+OverrideOutputName = AutoQuit.gcc32.exe
 HostApplication = 
 UseCustomMakefile = 0
 CustomMakefile = 
@@ -56,7 +56,7 @@ FileDescription = Developed using the Red Panda C++ IDE
 InternalName = 
 LegalCopyright = 
 LegalTrademarks = 
-OriginalFilename = AutoQuit.clg64.exe
+OriginalFilename = AutoQuit.gcc32.exe
 ProductName = AutoQuit
 ProductVersion = 0.1.1.1
 AutoIncBuildNr = 0
@@ -77,32 +77,6 @@ RealEncoding = ASCII
 
 
 [Unit2]
-FileName = main.rc
-CompileCpp = 0
-Folder = Resources
-Compile = 1
-Link = 0
-Priority = 1000
-OverrideBuildCmd = 0
-BuildCmd = 
-FileEncoding = PROJECT
-RealEncoding = windows-1250
-
-
-[Unit3]
-FileName = ../tiny-regex-c/re.c
-Folder = Sources
-Compile = 1
-Link = 1
-Priority = 1000
-OverrideBuildCmd = 0
-BuildCmd = 
-FileEncoding = PROJECT
-RealEncoding = 
-CompileCpp = 0
-
-
-[Unit4]
 FileName = main.c
 CompileCpp = 0
 Folder = Sources
@@ -113,6 +87,32 @@ OverrideBuildCmd = 0
 BuildCmd = 
 FileEncoding = PROJECT
 RealEncoding = ASCII
+
+
+[Unit3]
+FileName = main.rc
+Folder = Resources
+Compile = 1
+Link = 0
+Priority = 1000
+OverrideBuildCmd = 0
+BuildCmd = 
+FileEncoding = PROJECT
+RealEncoding = windows-1250
+CompileCpp = 0
+
+
+[Unit4]
+FileName = ../tiny-regex-c/re.c
+CompileCpp = 0
+Folder = Sources
+Compile = 1
+Link = 1
+Priority = 1000
+OverrideBuildCmd = 0
+BuildCmd = 
+FileEncoding = PROJECT
+RealEncoding = 
 
 
 [CompilerSettings]
