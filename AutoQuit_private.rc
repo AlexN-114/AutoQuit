@@ -2,3 +2,5 @@
 /* DO NOT EDIT! */
 
 #include "main.rc"
+
+A ICON "app.ico"

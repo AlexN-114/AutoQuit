@@ -20,7 +20,7 @@ ExeOutput = bin
 ObjectOutput = obj/gcc64
 LogOutput = 
 LogOutputEnabled = 0
-OverrideOutput = 1
+OverrideOutput = 0
 OverrideOutputName = AutoQuit.gcc64.exe
 HostApplication = 
 UseCustomMakefile = 0
@@ -64,19 +64,6 @@ SyncProduct = 1
 
 
 [Unit1]
-FileName = ../tiny-regex-c/re.c
-CompileCpp = 0
-Folder = Sources
-Compile = 1
-Link = 1
-Priority = 1000
-OverrideBuildCmd = 0
-BuildCmd = 
-FileEncoding = PROJECT
-RealEncoding = 
-
-
-[Unit2]
 FileName = main.rc
 CompileCpp = 0
 Folder = Resources
@@ -87,6 +74,19 @@ OverrideBuildCmd = 0
 BuildCmd = 
 FileEncoding = PROJECT
 RealEncoding = windows-1250
+
+
+[Unit2]
+FileName = version.h
+CompileCpp = 0
+Folder = Headers
+Compile = 0
+Link = 0
+Priority = 1000
+OverrideBuildCmd = 0
+BuildCmd = 
+FileEncoding = PROJECT
+RealEncoding = ASCII
 
 
 [Unit3]
@@ -103,11 +103,11 @@ CompileCpp = 0
 
 
 [Unit4]
-FileName = version.h
+FileName = ../tiny-regex-c/re.c
 CompileCpp = 0
-Folder = Headers
-Compile = 0
-Link = 0
+Folder = Sources
+Compile = 1
+Link = 1
 Priority = 1000
 OverrideBuildCmd = 0
 BuildCmd = 

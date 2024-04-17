@@ -64,16 +64,16 @@ SyncProduct = 1
 
 
 [Unit1]
-FileName = main.c
+FileName = main.rc
 CompileCpp = 0
-Folder = Sources
+Folder = Resources
 Compile = 1
-Link = 1
+Link = 0
 Priority = 1000
 OverrideBuildCmd = 0
 BuildCmd = 
 FileEncoding = PROJECT
-RealEncoding = ASCII
+RealEncoding = windows-1250
 
 
 [Unit2]
@@ -90,6 +90,19 @@ RealEncoding = windows-1250
 
 
 [Unit3]
+FileName = main.c
+Folder = Sources
+Compile = 1
+Link = 1
+Priority = 1000
+OverrideBuildCmd = 0
+BuildCmd = 
+FileEncoding = PROJECT
+RealEncoding = ASCII
+CompileCpp = 0
+
+
+[Unit4]
 FileName = ../tiny-regex-c/re.c
 Folder = Sources
 Compile = 1
@@ -98,20 +111,8 @@ Priority = 1000
 OverrideBuildCmd = 0
 BuildCmd = 
 FileEncoding = PROJECT
-RealEncoding = 
+RealEncoding = ASCII
 CompileCpp = 0
-
-
-[Unit4]
-FileName = main.rc
-Folder = Resources
-Compile = 1
-Link = 0
-Priority = 1000
-OverrideBuildCmd = 0
-BuildCmd = 
-FileEncoding = PROJECT
-RealEncoding = windows-1250
 
 
 [CompilerSettings]

@@ -1,7 +1,7 @@
 [Project]
 filename = AutoQuit.gcc32.dev
 name = AutoQuit
-UnitCount = 4
+UnitCount = 5
 Type = 1
 Ver = 3
 Includes = 
@@ -64,20 +64,20 @@ SyncProduct = 1
 
 
 [Unit1]
-FileName = version.h
+FileName = main.c
 CompileCpp = 0
-Folder = Headers
-Compile = 0
-Link = 0
+Folder = Sources
+Compile = 1
+Link = 1
 Priority = 1000
 OverrideBuildCmd = 0
 BuildCmd = 
 FileEncoding = PROJECT
-RealEncoding = ASCII
+RealEncoding = windows-1250
 
 
 [Unit2]
-FileName = main.c
+FileName = ../tiny-regex-c/re.c
 CompileCpp = 0
 Folder = Sources
 Compile = 1
@@ -103,11 +103,23 @@ CompileCpp = 0
 
 
 [Unit4]
-FileName = ../tiny-regex-c/re.c
+FileName = version.h
 CompileCpp = 0
-Folder = Sources
-Compile = 1
-Link = 1
+Folder = Headers
+Compile = 0
+Link = 0
+Priority = 1000
+OverrideBuildCmd = 0
+BuildCmd = 
+FileEncoding = PROJECT
+RealEncoding = windows-1250
+
+
+[Unit5]
+FileName = app.ico
+Folder = Others
+Compile = 0
+Link = 0
 Priority = 1000
 OverrideBuildCmd = 0
 BuildCmd = 
