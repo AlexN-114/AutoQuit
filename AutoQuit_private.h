@@ -16,7 +16,7 @@
 #define INTERNAL_NAME	""
 #define LEGAL_COPYRIGHT	""
 #define LEGAL_TRADEMARKS	""
-#define ORIGINAL_FILENAME	"AutoQuit.clg32.exe"
+#define ORIGINAL_FILENAME	"AutoQuit.gcc32.exe"
 #define PRODUCT_NAME	"AutoQuit"
 #define PRODUCT_VERSION	"0.1.1.1"
 

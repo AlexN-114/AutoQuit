@@ -9,6 +9,8 @@
  * 28.03.2024 *  aN * .05 * bei PostMessage Parameter WM_COMMAND ergänzt
  * 28.03.2024 *  aN * .06 * die Möglichkeit eine ID anzugeben
  * 15.04.2024 *  aN * .09 * regex ala ChkWnd()
+ * 16.04.2024 *  aN * .10 * ignore case
+ * 17.04.2024 *  aN * .10 * vollständige Hilfe
  ****************************************************/
 
 #include <windows.h>
@@ -62,8 +64,16 @@ int QuitWindowByText(char *txt, size_t id)
     HWND hwnd;
     int treffer = 0;
     static char hStr[500];
+    static char vg_suche[500];
+    static char vg_titel[500];
     
     printf("Suche (%s): %s\n",wie,txt);
+    
+    strcpy(vg_suche, txt);
+    if(ignore_case)
+    {
+        _strlwr(vg_suche);
+    }
 
     hwnd = FindWindow(NULL, NULL);
 
@@ -71,10 +81,16 @@ int QuitWindowByText(char *txt, size_t id)
     {
         // - Fenster auswerten
         GetWindowText(hwnd, hStr, sizeof(hStr));
-        
+
+        strcpy(vg_titel, hStr);
+        if(ignore_case)
+        {
+            _strlwr(vg_titel);
+        }
+
         if (selbst != hwnd)
         {
-            if ((*compare)(hStr, txt) != 0)
+            if ((*compare)(vg_titel, vg_suche) != 0)
             {
                 printf("gefunden: %s\n", hStr);
                 PostMessage(hwnd, WM_COMMAND , id, 0);
@@ -118,6 +134,10 @@ int main(int argc, char *argv[])
             compare = &StrInStr;
             wie = wie_t;
         }
+        else if (strcmp(argv[i],"-i")==0)
+        {
+            ignore_case = 1;
+        }
         else if (0 == strnicmp(argv[i],"ID=",3))
         {
             // dann kommt mit dem 4. Zeichen die ID
@@ -136,7 +156,12 @@ int main(int argc, char *argv[])
     }
     else
     {
-        printf("Verwendung:\nAutoQuit [[-r][-t][ID=##] <SuchText>]...\n%%ERRORLEVEL%% ist Anzahl Treffer\n");
+        printf("Verwendung:\nAutoQuit [[-r][-t][-i][ID=##] <SuchText>]...\n"
+            "    -r   ... regular Expression\n"
+            "    -t   ... Text direkt\n"
+            "    -i   ... ignoriere Groß-/Kleinschreibung\n"
+            "    ID=# ... sende # statt IDOK\n"
+            "%%ERRORLEVEL%% ist Anzahl Treffer\n");
     }
 
     SetConsoleTitle(titel);

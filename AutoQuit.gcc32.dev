@@ -64,6 +64,19 @@ SyncProduct = 1
 
 
 [Unit1]
+FileName = main.rc
+CompileCpp = 0
+Folder = Resources
+Compile = 1
+Link = 0
+Priority = 1000
+OverrideBuildCmd = 0
+BuildCmd = 
+FileEncoding = PROJECT
+RealEncoding = windows-1250
+
+
+[Unit2]
 FileName = main.c
 CompileCpp = 0
 Folder = Sources
@@ -76,29 +89,16 @@ FileEncoding = PROJECT
 RealEncoding = windows-1250
 
 
-[Unit2]
-FileName = ../tiny-regex-c/re.c
-CompileCpp = 0
-Folder = Sources
-Compile = 1
-Link = 1
-Priority = 1000
-OverrideBuildCmd = 0
-BuildCmd = 
-FileEncoding = PROJECT
-RealEncoding = ASCII
-
-
 [Unit3]
-FileName = main.rc
-Folder = Resources
-Compile = 1
+FileName = app.ico
+Folder = Others
+Compile = 0
 Link = 0
 Priority = 1000
 OverrideBuildCmd = 0
 BuildCmd = 
 FileEncoding = PROJECT
-RealEncoding = windows-1250
+RealEncoding = ASCII
 CompileCpp = 0
 
 
@@ -116,15 +116,16 @@ RealEncoding = windows-1250
 
 
 [Unit5]
-FileName = app.ico
-Folder = Others
-Compile = 0
-Link = 0
+FileName = ../tiny-regex-c/re.c
+Folder = Sources
+Compile = 1
+Link = 1
 Priority = 1000
 OverrideBuildCmd = 0
 BuildCmd = 
 FileEncoding = PROJECT
-RealEncoding = 
+RealEncoding = ASCII
+CompileCpp = 0
 
 
 [CompilerSettings]
